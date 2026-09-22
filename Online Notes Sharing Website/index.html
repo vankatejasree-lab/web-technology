@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NoteShare - Online Notes Sharing</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            📚 NoteShare
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#notes">Notes</a>
+            <a href="#upload">Upload</a>
+            <a href="#about">About</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="hero-icon">
+                📖
+            </div>
+
+            <h1>
+                Share Knowledge.<br>
+                Learn Together.
+            </h1>
+
+            <p>
+                Upload, share and access academic notes
+                easily with students.
+            </p>
+
+            <a href="#notes" class="hero-btn">
+                Explore Notes
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= NOTES ================= -->
+
+    <section class="notes-section" id="notes">
+
+        <div class="section-heading">
+
+            <span class="small-title">
+                STUDY MATERIALS
+            </span>
+
+            <h2>
+                Explore Notes
+            </h2>
+
+            <p>
+                Find useful notes shared by students.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-area">
+
+            <div class="search-box">
+
+                <span>🔍</span>
+
+                <input type="text" id="searchInput" placeholder="Search notes...">
+
+            </div>
+
+
+            <select id="subjectFilter">
+
+                <option value="all">
+                    All Subjects
+                </option>
+
+                <option value="Computer Science">
+                    Computer Science
+                </option>
+
+                <option value="Cloud Computing">
+                    Cloud Computing
+                </option>
+
+                <option value="Data Science">
+                    Data Science
+                </option>
+
+                <option value="DBMS">
+                    DBMS
+                </option>
+
+                <option value="Operating Systems">
+                    Operating Systems
+                </option>
+
+                <option value="Java">
+                    Java
+                </option>
+
+                <option value="Python">
+                    Python
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- NOTES CONTAINER -->
+
+        <div id="notesContainer" class="notes-container">
+
+        </div>
+
+
+        <div id="noResults" class="no-results">
+
+            <div>📭</div>
+
+            <h3>
+                No notes found
+            </h3>
+
+            <p>
+                Try another search or upload your own notes.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= UPLOAD ================= -->
+
+    <section class="upload-section" id="upload">
+
+        <div class="section-heading">
+
+            <span class="small-title">
+                SHARE KNOWLEDGE
+            </span>
+
+            <h2>
+                Upload Your Notes
+            </h2>
+
+            <p>
+                Share your study materials with other students.
+            </p>
+
+        </div>
+
+
+        <div class="upload-container">
+
+            <form id="uploadForm">
+
+                <div class="form-group">
+
+                    <label>
+                        Note Title
+                    </label>
+
+                    <input type="text" id="noteTitle" placeholder="Example: Cloud Computing Unit 1" required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Subject
+                    </label>
+
+                    <select id="noteSubject" required>
+
+                        <option value="">
+                            Select Subject
+                        </option>
+
+                        <option value="Computer Science">
+                            Computer Science
+                        </option>
+
+                        <option value="Cloud Computing">
+                            Cloud Computing
+                        </option>
+
+                        <option value="Data Science">
+                            Data Science
+                        </option>
+
+                        <option value="DBMS">
+                            DBMS
+                        </option>
+
+                        <option value="Operating Systems">
+                            Operating Systems
+                        </option>
+
+                        <option value="Java">
+                            Java
+                        </option>
+
+                        <option value="Python">
+                            Python
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Description
+                    </label>
+
+                    <textarea id="noteDescription" placeholder="Enter a short description..." required></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Select Notes File
+                    </label>
+
+                    <input type="file" id="noteFile" accept=".pdf,.doc,.docx,.txt" required>
+
+                    <small>
+                        Supported formats: PDF, DOC, DOCX, TXT
+                    </small>
+
+                </div>
+
+
+                <button type="submit" class="upload-btn">
+
+                    📤 Upload Notes
+
+                </button>
+
+            </form>
+
+
+            <div id="uploadMessage" class="upload-message"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about-section" id="about">
+
+        <div class="section-heading">
+
+            <span class="small-title">
+                ABOUT US
+            </span>
+
+            <h2>
+                About NoteShare
+            </h2>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    📚
+                </div>
+
+                <h3>
+                    Share Notes
+                </h3>
+
+                <p>
+                    Students can upload and share
+                    their study materials.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    🔍
+                </div>
+
+                <h3>
+                    Find Easily
+                </h3>
+
+                <p>
+                    Search notes by title or
+                    subject quickly.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    🤝
+                </div>
+
+                <h3>
+                    Learn Together
+                </h3>
+
+                <p>
+                    Build a collaborative learning
+                    environment for students.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            📚 NoteShare
+        </div>
+
+        <p>
+            Online Notes Sharing Platform
+        </p>
+
+        <p class="copyright">
+            © 2026 NoteShare. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
